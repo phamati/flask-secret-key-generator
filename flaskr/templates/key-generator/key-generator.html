@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="col-md-12">
+  <div class="col-md-6 offset-md-3">
+    <h1>{% block title %}Flask Secret key generator{% endblock %}</h1>
+    <hr/>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="col-md-6 offset-md-3">
+    <label for="sk_flask">Generated key:</label>
+  </div>
+  <div class="col-md-6 offset-md-3 alert alert-success">
+    <p class="text-break"><b>"{{ data[1] }}"</b></p>
+  </div>
+  
+  <div class="col-md-6 offset-md-3">
+    <div class="position-absolute bottom-0 end-0 me-3">
+      <p id="data"><small>{{ data[2] }}</small></p>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="col-md-12">
+  <div class="col-md-6 offset-md-3">
+    <h1>{% block title %}Flask Secret key generator{% endblock %}</h1>
+    <hr/>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="col-md-6 offset-md-3">
+    <form method="post">
+      <div class="mb-3">
+        <label for="email" class="form-label">Send to e-mail:</label>
+        <input name="email" id="email" class="form-control">
+      </div>
+      <div class="mb-3 text-end">
+        <input type="submit" value="Generate key" class="btn btn-primary">
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
